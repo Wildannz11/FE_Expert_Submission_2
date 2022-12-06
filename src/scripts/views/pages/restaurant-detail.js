@@ -15,22 +15,22 @@ const DetailResto = {
         
         <div id="likebtn"></div>
         
-        <form class="form-post-review">
-          <h3>Post Review</h3>
-        
-          <div class="inputname">
-            <label for="nameinput" class="form-label">Nama Reviewer</label>
-            <input type="text" class="form-input" id="nameinput" minlength="3" placeholder="Name" required>
-          </div>
-
-          <div class="inputreview">
-            <label for="reviewinput" class="form-label">Review</label>
-            <input type="text" class="form-input" id="reviewinput" minlength="3" placeholder="Review" required>
-          </div>              
-
-          <button id="submitreview" type="submit" class="btn">Kirim Review</button>
-        </form>
+          <form class="form-post-review">
+            <h3>Post Review</h3>
           
+            <div class="inputname">
+              <label for="nameinput" class="form-label">Nama Reviewer</label>
+              <input type="text" class="form-input" id="nameinput" minlength="3" placeholder="Name" required>
+            </div>
+
+            <div class="inputreview">
+              <label for="reviewinput" class="form-label">Review</label>
+              <input type="text" class="form-input" id="reviewinput" minlength="3" placeholder="Review" required>
+            </div>              
+
+            <button id="submitreview" type="submit" class="btn">Kirim Review</button>
+          </form>
+            
       </div>         
     </div>
       `;

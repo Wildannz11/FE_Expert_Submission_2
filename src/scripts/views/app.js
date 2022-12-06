@@ -25,11 +25,17 @@ class App {
     this._content.innerHTML = await page.render();
     await page.afterRender();
 
-    // const skipLink = document.querySelector('.skip-link');
-    // skipLink.addEventListener('click', (event) => {
-    //   event.preventDefault();
-    //   document.querySelector('#mainContent').focus();
-    // });
+    const skipLink = document.querySelector('.skip-link');
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#mainContent').focus();
+    });
+
+  //     const skipLinkElem = document.querySelector('.skip-link');
+  //     skipLinkElem.addEventListener('click', (event) => {
+  //     event.preventDefault();
+  //     document.querySelector('#mainContent').focus();
+  // });
   }
 }
 
