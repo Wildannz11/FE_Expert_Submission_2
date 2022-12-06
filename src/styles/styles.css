@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+   
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+   
+   
+  /*
+    AppBar
+  */
+   
+.app-bar {
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+   
+.app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+}
+   
+.app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+} 
+   
+.app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+}
+   
+.app-bar .app-bar__brand h1 {
+    color: #db0000;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+}
+   
+.app-bar .app-bar__navigation {
+    position: absolute;
+    top: 55px;
+    left: -180px;
+    width: 120px;
+    transition: all 1s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+   
+.app-bar .app-bar__navigation.open {
+    left: 0;
+    background-color: red;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  background-color:orange;
+  color: rgb(162, 19, 19);
+}
+
+.app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-height: 44px; 
+    min-width: 44px;
+}
+   
+/* 
+  skiplihnk 
+*/  
+.skip-link {
+  position: absolute;
+	top: -40px;
+  left: 0;
+	background-color: blueviolet;
+	color: white;
+	padding: 10px;
+	font-size: 12px;
+	z-index: 10;
+  max-width: 100px;
+}
+.skip-link:focus {
+	top: 0;
+}
+/* .skip-link:hover {
+	background-color: white ;
+  color: #db0000;
+} */
+
+
+
+  /*
+    Main Content
+  */
+   
+main {
+    flex: 1;
+}
+   
+.content {
+    margin: 0 auto;
+    min-height: 100%;
+}
+   
+.content .content__heading {
+    font-weight: normal;
+}
+
+/* Hero */
+
+.hero {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  min-height: 450px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/hero-image_2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: red;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: red;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.home-container h2 {
+  text-align: center;
+}
+
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 32px;
+}
+
+.restaurants-favorites {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/*
+  Restaurant Item
+*/
+
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item:hover {
+  box-shadow: 5px 0 0 5px red;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+  max-height: fit-content;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 10px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  color: #db0000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+
+/*
+  restaurant
+*/
+
+
+
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px; */
+}
+
+.restaurant .detail-restaurant{
+  margin: 20px;
+  padding: 20px;
+}
+
+.restaurant .restaurant__name {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.restaurant .restaurant__poster{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+
+.restaurant .restaurant__info .restaurant__info__header {
+  margin: 20px 0;
+}
+
+.restaurant .restaurant__description {
+  margin: 20px 0 ;
+  border-top: black 1px solid;
+}
+
+.restaurant .restaurant__reviews {
+  border-top: black 1px solid;
+}
+
+.restaurant .restaurant__reviews .reviews{
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.form-post-review {
+  width: max-content;
+  display: block;
+  border-top: black 1px solid;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.form-post-review h3 {
+  margin: 10px 0;
+
+}
+
+.form-post-review .form-label {
+  font-weight: bold;
+  margin: 10px 10px;
+}
+
+.form-post-review .form-input {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 20px 20px 0;
+  border: none;
+}
+
+
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ce1111;
+  
+  position: fixed;
+  bottom: 36px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.like:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+  background-color: red;
+}
+
+.btn:hover {background-color: orangered;}
+
+  /*
+    Footer
+  */
+   
+  footer {
+    padding: 16px;
+    background-color: #db0000;
+}
+   
+  footer p {
+    text-align: center;
+    color: white;
+}
+   
+  footer p a {
+    color: skyblue;
+    text-decoration: none;
+}
